@@ -1,0 +1,479 @@
+[
+    {
+    "section": {
+        "description": "Power of Attorney",
+        "section_text": "Power of Attorney"
+    },
+    "relationship": "",
+    "id": 101,
+    "client_id": null,
+    "rules": [
+       {
+        "value": "true",
+        "value_type": "string",
+        "operator": "==",
+        "client_data": null,
+        "param": "{{power_of_attorney}}",
+        "rule_type": "response",
+        "description": "Shows question if client has Power of Attorney"
+        }
+    ],
+    "question_text": "Will {{RELATIONSHIP}} have view accounts/trading authority/ view and trade/ full authorization/ formal POA?",
+    "description": "",
+    "image_url": "",
+    "dynamic_option_types": "",
+    "type": "static-single-choice",
+    "is_required": true,
+    "is_poa": true,
+    "client_section_data": null,
+    "question_options": [
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "client_id",
+            "option_text": "client_id",
+            "type": "hidden",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "",
+            "validation": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "authorization",
+            "option_text": "View Accounts",
+            "type": "single-choice-checkbox",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "view_accounts",
+            "initial_value": "",
+            "validation": {
+                "required": false
+            },
+            "tag": [],
+            "reset_responses": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "authorization",
+            "option_text": "Trading Authorization",
+            "type": "single-choice-checkbox",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "trading_authorization",
+            "initial_value": "",
+            "validation": {
+                "required": false
+            },
+            "tag": [],
+            "reset_responses": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "authorization",
+            "option_text": "Full Authorization",
+            "type": "single-choice-checkbox",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "full_authorization",
+            "initial_value": "",
+            "validation": {
+                "required": false
+            },
+            "tag": [],
+            "reset_responses": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "authorization",
+            "option_text": "Formal POA",
+            "type": "single-choice-checkbox",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "formal_poa",
+            "initial_value": "",
+            "validation": {
+                "required": false
+            },
+            "tag": [],
+            "reset_responses": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "authorization",
+            "option_text": "View and Trade",
+            "type": "single-choice-checkbox",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "view_and_trade",
+            "initial_value": "",
+            "validation": {
+                "required": false
+            },
+            "tag": [],
+            "reset_responses": []
+        }
+    ],
+    "table": "relationships",
+    "columns": [
+        {
+            "authorization": "authorization",
+            "client_id": "client_id"
+        }
+    ],
+    "responses": [],
+    "is_dynamic": false,
+    "is_primary_client": false
+    },
+    {
+        "section": {
+            "description": "Power of Attorney",
+            "section_text": "Power of Attorney"
+        },
+        "relationship": "",
+        "id": 100,
+        "client_id": null,
+        "rules": [
+            {
+                "value": "true",
+                "value_type": "string",
+                "operator": "==",
+                "client_data": null,
+                "param": "{{power_of_attorney}}",
+                "rule_type": "response",
+                "description": "Shows question if client has Power of Attorney"
+            }
+        ],
+        "question_text": "{{RELATIONSHIP}}'s phone number and email address",
+        "description": "",
+        "image_url": "",
+        "dynamic_option_types": "",
+        "type": "static-form",
+        "is_required": true,
+        "is_poa": true,
+        "client_section_data": null,
+        "question_options": [
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "client_id",
+                "option_text": "client_id",
+                "type": "hidden",
+                "value_type": "string",
+                "compare": true,
+                "attributes": [],
+                "value": "",
+                "validation": []
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "email",
+                "option_text": "Email",
+                "type": "text",
+                "value_type": "string",
+                "compare": false,
+                "attributes": {
+                    "placeholder": "Email",
+                    "key_validate": "email"
+                },
+                "value": "",
+                "initial_value": "",
+                "validation": {
+                    "required": true,
+                    "email": true
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "mobile_number",
+                "option_text": "Mobile",
+                "type": "text-mask",
+                "mask": "###-###-####",
+                "value_type": "string",
+                "compare": false,
+                "attributes": {
+                    "placeholder": "Mobile",
+                    "key_validate": "mobile"
+                },
+                "value": "",
+                "initial_value": "",
+                "validation": {
+                    "required": false,
+                    "validphone": true
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "preferred_number",
+                "option_text": "Mobile Phone Number",
+                "type": "simple-checkbox",
+                "value_type": "string",
+                "compare": false,
+                "attributes": {
+                    "placeholder": "Mobile"
+                },
+                "value": "M",
+                "validation": {
+                    "required": false
+                },
+                "initial_value": "",
+                "readonly": {
+                    "key_name": [
+                        "H",
+                        "O"
+                    ]
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "home_number",
+                "option_text": "Home",
+                "type": "text-mask",
+                "mask": "###-###-####",
+                "value_type": "string",
+                "compare": false,
+                "attributes": {
+                    "placeholder": "Home",
+                    "key_validate": "home"
+                },
+                "value": "",
+                "initial_value": "",
+                "validation": {
+                    "required": false,
+                    "validphone": true
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "preferred_number",
+                "option_text": "Home Phone Number",
+                "type": "simple-checkbox",
+                "value_type": "string",
+                "compare": false,
+                "attributes": [],
+                "value": "H",
+                "initial_value": "",
+                "validation": {
+                    "required": false
+                },
+                "readonly": {
+                    "key_name": [
+                        "M",
+                        "O"
+                    ]
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "office_number",
+                "option_text": "Work",
+                "type": "text-mask",
+                "mask": "###-###-####",
+                "value_type": "string",
+                "compare": false,
+                "attributes": {
+                    "placeholder": "Work",
+                    "key_validate": "work"
+                },
+                "value": "",
+                "initial_value": "",
+                "validation": {
+                    "required": false,
+                    "validphone": true
+                }
+            },
+            {
+                "dependencies": [
+                    {
+                        "marital_status": [
+                            "single",
+                            "married",
+                            "common-law",
+                            "separated",
+                            "divorced",
+                            "widowed"
+                        ]
+                    }
+                ],
+                "key_name": "preferred_number",
+                "option_text": "Work Phone Number",
+                "type": "simple-checkbox",
+                "value_type": "string",
+                "compare": false,
+                "attributes": [],
+                "value": "O",
+                "initial_value": "",
+                "validation": {
+                    "required": false
+                },
+                "readonly": {
+                    "key_name": [
+                        "M",
+                        "H"
+                    ]
+                }
+            }
+        ],
+        "table": "persons",
+        "columns": [
+            {
+                "office_number": "office_number",
+                "home_number": "home_number",
+                "mobile_number": "mobile_number",
+                "email": "email",
+                "client_id": "client_id",
+                "preferred_number": "preferred_number"
+            }
+        ],
+        "responses": [],
+        "is_dynamic": false,
+        "is_primary_client": false
+    }
+]

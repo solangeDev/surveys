@@ -1,0 +1,6277 @@
+{
+  "progress": null,
+  "type": "risk",
+  "sections": [
+    {
+      "section_text": "Employment and Financial Information",
+      "description": "Employment and Financial Information",
+      "attributes": [],
+      "questions": [
+        {
+          "id": 438,
+          "rules": [],
+          "question_text": "What is your date of birth?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{DOB}}",
+              "risk_option_id": 2470,
+              "key_name": "date_of_birth",
+              "option_text": "Date of birth",
+              "type": "date",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {
+                "placeholder": "Date of birth",
+                "key_validate": "date of birth"
+              },
+              "initial_value": "['person']['date_of_birth']",
+              "value": "",
+              "validation": {
+                "required": true,
+                "validedad": true
+              }
+            }
+          ],
+          "table": "persons",
+          "columns": [
+            {
+              "date_of_birth": "date_of_birth"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 451,
+          "rules": [],
+          "question_text": "What is your employment status?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": 1995,
+              "key_name": "employment_status",
+              "option_text": "Employed Full-Time",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "0",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "0",
+                  "questions": [
+                    466
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": 1996,
+              "key_name": "employment_status",
+              "option_text": "Employed Part-Time",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "1",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "1",
+                  "questions": [
+                    466
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": 1997,
+              "key_name": "employment_status",
+              "option_text": "Self Employed",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2",
+                  "questions": [
+                    466
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": 1998,
+              "key_name": "employment_status",
+              "option_text": "Unemployed",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "3",
+                  "questions": [
+                    466
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": 1999,
+              "key_name": "employment_status",
+              "option_text": "Retired",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "4",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "4",
+                  "questions": [
+                    465
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['ClientEmployment']['0']['employment_status']",
+              "risk_option_id": "",
+              "key_name": "employment_status",
+              "option_text": "Student",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "5",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{employment_status}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "5",
+                  "questions": [
+                    465
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 452,
+          "rules": [],
+          "question_text": "What is your annual income?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{ANNUAL_INCOME}}",
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "expected_income"
+              },
+              "risk_option_id": 2000,
+              "key_name": "expected_income",
+              "option_text": "Annual Income",
+              "type": "range-slider",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "",
+              "parameters": {
+                "max": "100000000",
+                "min": "0",
+                "breakpoints": "2500"
+              },
+              "validation": {}
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "expected_income": "expected_income"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 453,
+          "rules": [],
+          "question_text": "What is your primary source of income?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "income_source",
+                "initial_value": true
+              },
+              "risk_option_id": 2001,
+              "key_name": "income_source",
+              "option_text": "Salary Income",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "Salary Income",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "income_source",
+                "initial_value": true
+              },
+              "risk_option_id": 2002,
+              "key_name": "income_source",
+              "option_text": "Self-employment Income",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "Self-employment Income",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "income_source",
+                "initial_value": true
+              },
+              "risk_option_id": 2003,
+              "key_name": "income_source",
+              "option_text": "Pension Income, CPP/OAS or other government income",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "Pension Income / CPP",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "income_source",
+                "initial_value": true
+              },
+              "risk_option_id": 2004,
+              "key_name": "income_source",
+              "option_text": "Investment Income",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "Investment Income",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "income_source",
+                "initial_value": true
+              },
+              "risk_option_id": 2005,
+              "key_name": "income_source",
+              "option_text": "Other",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "Other",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "income_source": "income_source"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 454,
+          "rules": [],
+          "question_text": "What is the value of your liquid assets?",
+          "description": "Add up the money you have in savings and liquid investments.",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{LIQUID_ASSETS}}",
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "liquid_assets"
+              },
+              "risk_option_id": 2006,
+              "key_name": "liquid_assets",
+              "option_text": "Liquid Assets",
+              "type": "range-slider",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "",
+              "parameters": {
+                "max": "100000000",
+                "min": "0",
+                "breakpoints": "10000"
+              },
+              "validation": {}
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "liquid_assets": "liquid_assets"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 455,
+          "rules": [],
+          "question_text": "What is the value of your fixed personal assets?",
+          "description": "Add up the total value of real estate properties and other assets that can't be quickly and easily converted to cash.",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{FIXED_ASSETS}}",
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "fixed_personal_assets"
+              },
+              "risk_option_id": 2007,
+              "key_name": "fixed_personal_assets",
+              "option_text": "Personal Assets",
+              "type": "range-slider",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "",
+              "parameters": {
+                "max": "100000000",
+                "min": "0",
+                "breakpoints": "10000"
+              },
+              "validation": {}
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "fixed_personal_assets": "fixed_personal_assets"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 456,
+          "rules": [],
+          "question_text": "How much have you currently borrowed against your real estate properties?",
+          "description": "Add up the total value of real estate properties and other assets that can't be quickly and easily converted to cash.",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{MORTGAGE_DEBT}}",
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "mortgage_debt"
+              },
+              "risk_option_id": 2008,
+              "key_name": "mortgage_debt",
+              "option_text": "Estate Properties",
+              "type": "range-slider",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "",
+              "parameters": {
+                "max": "10000000",
+                "min": "0",
+                "breakpoints": "10000"
+              },
+              "validation": {},
+              "tag": [
+                {
+                  "key": "{{mortage_debt_value}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": []
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "mortgage_debt": "mortgage_debt"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 457,
+          "rules": [],
+          "question_text": "What is the current level of your consumer debt?",
+          "description": "Add up the balances on any lines of credit, car loans, student loans, credit cards and any other debt not used for real estate.",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-form",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_tag": "{{CONSUMER_DEBT}}",
+              "preload_data": {
+                "indice": "['ClientFinancials']",
+                "value": "consumer_debt"
+              },
+              "risk_option_id": 2009,
+              "key_name": "consumer_debt",
+              "option_text": "consumer debt",
+              "type": "range-slider",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "",
+              "parameters": {
+                "max": "10000000",
+                "min": "0",
+                "breakpoints": "10000"
+              },
+              "validation": {},
+              "tag": [
+                {
+                  "key": "{{consumer_debt_value}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "and": [
+                    {
+                      "id": 456,
+                      "key_name": "mortgage_debt",
+                      "operator": "=="
+                    }
+                  ],
+                  "value": "0",
+                  "operator": "==",
+                  "questions": [
+                    458
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "client_financials",
+          "columns": [
+            {
+              "consumer_debt": "consumer_debt"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 458,
+          "rules_or": true,
+          "rules": [
+            {
+              "value": "0",
+              "value_type": "string",
+              "operator": "<",
+              "client_data": null,
+              "param": "{{mortage_debt_value}}",
+              "rule_type": "response",
+              "description": "Shows question if clients is U.S. Person"
+            },
+            {
+              "value": "0",
+              "value_type": "string",
+              "operator": "<",
+              "client_data": null,
+              "param": "{{consumer_debt_value}}",
+              "rule_type": "response",
+              "description": "Shows question if clients is U.S. Person"
+            }
+          ],
+          "question_text": "What types of debt do you have outstanding?",
+          "description": "Select all that apply",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-multiple-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2010,
+              "key_name": "outstanding",
+              "option_text": "Mortgage and/or home equity line of credit (HELOC)",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2010",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2011,
+              "key_name": "outstanding",
+              "option_text": "Other line of credit",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2011",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2012,
+              "key_name": "outstanding",
+              "option_text": "Car loan or student loan",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2012",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2013,
+              "key_name": "outstanding",
+              "option_text": "Money borrowed for investing or margin debt",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2013",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2014,
+              "key_name": "outstanding",
+              "option_text": "Other debt",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2014",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        }
+      ]
+    },
+    {
+      "section_text": "Risk Questionnaire",
+      "description": "Risk Questionnaire",
+      "attributes": [],
+      "questions": [
+        {
+          "question_tag": true,
+          "id": 459,
+          "rules": [],
+          "question_text": "Suppose one year ago you invested $[[0.10 * {{NET_ASSETS}}]] in a portfolio. Today you checked its value and discover that it is now worth $[[0.087 * {{NET_ASSETS}}]]. How would you feel?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2015,
+              "key_name": "invested",
+              "option_text": "Panic – I’d want my advisor to sell, and invest the proceeds in cash",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2015",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id10}}",
+                  "value": true
+                },
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2015",
+                  "questions": [
+                    460
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2016,
+              "key_name": "invested",
+              "option_text": "Nervous – I’d want my advisor to sell part of the portfolio and invest the proceeds in a less volatile investment",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2016",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id10}}",
+                  "value": true
+                },
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": false
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2017,
+              "key_name": "invested",
+              "option_text": "Calm – I’d sit tight, expecting the portfolio to recover",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2017",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id10}}",
+                  "value": true
+                },
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": false
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2018,
+              "key_name": "invested",
+              "option_text": "Positive – If I had any more money, I’d invest it in the portfolio",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2018",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id10}}",
+                  "value": true
+                },
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": false
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 460,
+          "rules": [
+            {
+              "value": [
+                "2016",
+                "2017",
+                "2018"
+              ],
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{invested_id10}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "Now suppose when you look at the portfolio again in 6 months, it is worth $[[0.074 * {{NET_ASSETS}}]]. How do you think you would feel?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2019,
+              "key_name": "portfolio",
+              "option_text": "Panic – I’d want my advisor to sell and keep the proceeds in cash",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2019",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2020,
+              "key_name": "portfolio",
+              "option_text": "Nervous – I’d want my advisor to sell part of the portfolio and invest the proceeds in a less volatile investment",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2020",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2021,
+              "key_name": "portfolio",
+              "option_text": "Calm – I’d sit tight, expecting the portfolio to recover",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2021",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2022,
+              "key_name": "portfolio",
+              "option_text": " Positive – If I had any more money, I’d invest it in the portfolio",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2022",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{investments}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 461,
+          "rules": [
+            {
+              "value": "true",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{investments}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "reset_response": true,
+          "question_text": "Investments in which the initial investment is '100% safe' sometimes earn less than the inflation rate. This means that, while no money is lost, your money will buy less in the future. With respect to your goal(s), which of the following is most true?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2023,
+              "key_name": "investment",
+              "option_text": " My money should be '100% safe', even if it means my returns do not keep up with inflation.",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2023",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id12}}",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2024,
+              "key_name": "investment",
+              "option_text": "It’s important that the value of my investments keep pace with inflation. I am willing to risk an occasional loss so that my investments can grow at about the same rate as inflation over time.",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2024",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id12}}",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2025,
+              "key_name": "investment",
+              "option_text": "It’s important that my investments grow faster than inflation. I’m comfortable with some losses along the way.",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2025",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id12}}",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2026,
+              "key_name": "investment",
+              "option_text": "It’s important that the value of my investments grow faster than inflation, but I would worry if in order to achieve this goal, there were too many ups and downs in the value of my investments.",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2026",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id12}}",
+                  "value": true
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 462,
+          "rules": [
+            {
+              "value": [
+                "2023",
+                "2024",
+                "2025",
+                "2026"
+              ],
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{invested_id12}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "The biggest risk to my standard of living in the long term is:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2027,
+              "key_name": "standard",
+              "option_text": "Losing my job",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2027",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2028,
+              "key_name": "standard",
+              "option_text": "Inflation",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2028",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2029,
+              "key_name": "standard",
+              "option_text": "Increased taxes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2029",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2030,
+              "key_name": "standard",
+              "option_text": "Low interest rates",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2030",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2031,
+              "key_name": "standard",
+              "option_text": "Political uncertainty",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2031",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 463,
+          "rules": [],
+          "question_text": "You unexpectedly lose $[[0.06 * {{LIQUID_ASSETS}}]]. You are offered the chance to get it all back but there is a 30% chance that you could lose $[[0.17 * {{LIQUID_ASSETS}}]]. Would you take the chance?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2032,
+              "key_name": "offered",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2032",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2033,
+              "key_name": "offered",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2033",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 464,
+          "rules": [],
+          "question_text": "Over the next few years, what do you think will happen to your income?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2034,
+              "key_name": "income",
+              "option_text": "Decrease substantially",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2034",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id15}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2035,
+              "key_name": "income",
+              "option_text": "Decrease slightly",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2035",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id15}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2036,
+              "key_name": "income",
+              "option_text": "Stay the same",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2036",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id15}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2037,
+              "key_name": "income",
+              "option_text": "Increase slightly",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2037",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id15}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2038,
+              "key_name": "income",
+              "option_text": "Increase substantially",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2038",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id15}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 465,
+          "rules": [
+            {
+              "value": [
+                "0",
+                "1",
+                "2",
+                "3"
+              ],
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{employment_status}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            },
+            {
+              "value": 0,
+              "value_type": "string",
+              "operator": ">=",
+              "client_data": null,
+              "param": "{{CALCULATE_65}}",
+              "rule_type": "data-tag",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "Based on your age, you have [[65 - {{AGE}}]] years until the traditional retirement age of 65. At 65, do you expect: ",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3058,
+              "key_name": "income",
+              "option_text": "To retire",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {},
+              "value": "3058",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3059,
+              "key_name": "income",
+              "option_text": "To be retired already and collecting a pension",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {},
+              "value": "3059",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3060,
+              "key_name": "income",
+              "option_text": "To be retired already and living off of your savings",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {},
+              "value": "3060",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3061,
+              "key_name": "income",
+              "option_text": "To still be working",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {},
+              "value": "3061",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 466,
+          "rules": [
+            {
+              "value": [
+                "4"
+              ],
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{employment_status}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "How much would your standard of living be affected if the future income from your investment portfolio were to fall below your expectations?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2043,
+              "key_name": "standard",
+              "option_text": "It would have a significant impact. I cannot afford for this income to decrease and I will struggle financially",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2043",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2044,
+              "key_name": "standard",
+              "option_text": "It would cause me to re-assess my standard of living and make some cut-backs",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2044",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2045,
+              "key_name": "standard",
+              "option_text": "Not much as I have other ways to maintain my lifestyle",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2045",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 467,
+          "rules": [],
+          "question_text": "Which of the following financial instruments have you invested in?",
+          "description": "Select all that apply",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-multiple-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2046,
+              "key_name": "instrument",
+              "option_text": "GICs",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2046",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2047,
+              "key_name": "instrument",
+              "option_text": "Canadian Stocks",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2047",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2048,
+              "key_name": "instrument",
+              "option_text": "Government Bonds",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2048",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2049,
+              "key_name": "instrument",
+              "option_text": "Calls / puts",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2049",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2050,
+              "key_name": "instrument",
+              "option_text": "Corporate Bonds",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2050",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2051,
+              "key_name": "instrument",
+              "option_text": "International Equities",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2051",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2052,
+              "key_name": "instrument",
+              "option_text": "Real Estate",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2052",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2053,
+              "key_name": "instrument",
+              "option_text": "Collectibles",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2053",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2054,
+              "key_name": "instrument",
+              "option_text": "Mutual Funds",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": true
+              },
+              "value": "2054",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2055,
+              "key_name": "instrument",
+              "option_text": "None of the Above",
+              "type": "multiple-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": {
+                "capitalize": false
+              },
+              "value": "2055",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 470,
+          "rules": [],
+          "question_text": "If given the choice of the following options, I would choose:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "option_tag": true,
+              "risk_option_id": 2056,
+              "key_name": "choice",
+              "option_text": "$[[0.05 * {{NET_ASSETS}}]] in cash",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2056",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id18}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "option_tag": true,
+              "risk_option_id": 2057,
+              "key_name": "choice",
+              "option_text": "A 50/50 chance of either $[[0.12 * {{NET_ASSETS}}]] or $0",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2057",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{invested_id18}}",
+                  "value": true,
+                  "value_key": "false"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2057",
+                  "questions": [
+                    471
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 471,
+          "rules": [
+            {
+              "value": "true",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{invested_id18}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "If instead, I was given the choice of the following options, I would choose:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "option_tag": true,
+              "risk_option_id": 2058,
+              "key_name": "choice",
+              "option_text": "$[[0.05 * {{NET_ASSETS}}]] in cash",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2056",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "option_tag": true,
+              "risk_option_id": 2059,
+              "key_name": "choice",
+              "option_text": "A 50/50 chance of either $[[0.18 * {{NET_ASSETS}}]] or $0",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2057",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        }
+      ]
+    },
+    {
+      "section_text": "Employment and Financial Information",
+      "description": "Employment and Financial Information",
+      "attributes": [],
+      "questions": [
+        {
+          "id": 696,
+          "rules": [],
+          "question_text": "I plan to begin taking significant amounts of money from my investments in:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2841,
+              "key_name": "amount",
+              "option_text": "Less than 2 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2841",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2842,
+              "key_name": "amount",
+              "option_text": "2 to 4 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2842",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2843,
+              "key_name": "amount",
+              "option_text": "4 to 9 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2843",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2844,
+              "key_name": "amount",
+              "option_text": "9 to 15 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2844",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2845,
+              "key_name": "amount",
+              "option_text": "More than 15 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2845",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        }
+      ]
+    },
+    {
+      "section_text": "Risk Questionnaire",
+      "description": "Risk Questionnaire",
+      "attributes": [],
+      "questions": [
+        {
+          "id": 472,
+          "rules": [],
+          "question_text": "What is your most important investment goal?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2060,
+              "key_name": "investment",
+              "option_text": "To preserve my money",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2060",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2061,
+              "key_name": "investment",
+              "option_text": "To see modest growth in my money",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2061",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2062,
+              "key_name": "investment",
+              "option_text": "To generate a steady income",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2062",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2063,
+              "key_name": "investment",
+              "option_text": "To see significant growth in my money",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2063",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2064,
+              "key_name": "investment",
+              "option_text": "To earn the highest return possible",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2064",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 473,
+          "rules": [],
+          "question_text": "Which scenario would make you feel worse?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2065,
+              "key_name": "scenario",
+              "option_text": "A stock went up 10% after I sold it",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2065",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2066,
+              "key_name": "scenario",
+              "option_text": " A stock went down 10% and I didn’t sell it",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2066",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 474,
+          "rules": [],
+          "question_text": "How secure are your current sources of income?",
+          "description": "Job, investment income, rental properties",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2067,
+              "key_name": "income",
+              "option_text": "Very insecure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2067",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2068,
+              "key_name": "income",
+              "option_text": "Insecure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2068",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2069,
+              "key_name": "income",
+              "option_text": "Somewhat insecure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2069",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2070,
+              "key_name": "income",
+              "option_text": "Not sure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2070",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2071,
+              "key_name": "income",
+              "option_text": "Somewhat secure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2071",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2072,
+              "key_name": "income",
+              "option_text": "Secure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2072",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2073,
+              "key_name": "income",
+              "option_text": "Very secure",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2073",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 475,
+          "rules": [],
+          "question_text": "Suppose a relative left you an inheritance of $[[0.33 * {{LIQUID_ASSETS}}]], stipulating in the will that you invest ALL the money in ONE of the following choices. Which one would you select?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2074,
+              "key_name": "choice",
+              "option_text": "A savings account or money market mutual fund",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2074",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2075,
+              "key_name": "choice",
+              "option_text": "A mutual fund that owns both stocks and bonds",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2075",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2076,
+              "key_name": "choice",
+              "option_text": "A portfolio of 15 common stocks",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2076",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2077,
+              "key_name": "choice",
+              "option_text": "A handful of small mining and/or internet stocks",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2077",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 476,
+          "rules": [],
+          "question_text": "How many months of current living expenses could you cover with your present savings and liquid short-term investments, before drawing on your investment portfolio?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2078,
+              "key_name": "choice",
+              "option_text": "Less than 6 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2078",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2079,
+              "key_name": "choice",
+              "option_text": "6 to 12 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2079",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2080,
+              "key_name": "choice",
+              "option_text": "12 to 18 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2080",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2081,
+              "key_name": "choice",
+              "option_text": "18 to 24 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2081",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2082,
+              "key_name": "choice",
+              "option_text": "More than 2 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2082",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 477,
+          "rules": [],
+          "question_text": "Interest rates are currently low, significantly lower than they have been in the past. From here, interest rates are likely to:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2083,
+              "key_name": "currently",
+              "option_text": "Increase a little",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2083",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2084,
+              "key_name": "currently",
+              "option_text": "Increase back to the long term average of 5.24%",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2084",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2085,
+              "key_name": "currently",
+              "option_text": "Stay about the same",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2085",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2086,
+              "key_name": "currently",
+              "option_text": "Continue to fall",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2086",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 478,
+          "rules": [],
+          "question_text": "In the past three years, my outlook for the stock market has:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2087,
+              "key_name": "market",
+              "option_text": "Become more positive",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2087",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2088,
+              "key_name": "market",
+              "option_text": "Remained  the same",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2088",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2089,
+              "key_name": "market",
+              "option_text": "Become less positive",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2089",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2090,
+              "key_name": "market",
+              "option_text": "Still won't touch them",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2090",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 479,
+          "rules": [],
+          "question_text": "You and your advisor have invested in shares of a company that you expect will double in value in 2-3 years. The share price drops 30% soon after you buy. You:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2091,
+              "key_name": "price",
+              "option_text": "Sell It",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2091",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2092,
+              "key_name": "invested",
+              "option_text": "Buy more and decrease your average price",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2092",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2093,
+              "key_name": "invested",
+              "option_text": "Wait and watch",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2093",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2094,
+              "key_name": "invested",
+              "option_text": "Call your advisor to see what they could possibly have been thinking",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2094",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 480,
+          "rules": [],
+          "question_text": "When I provide my money to an advisor:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2095,
+              "key_name": "provide",
+              "option_text": "I rarely look at my statements and expect them to let me know the results",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2095",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2096,
+              "key_name": "provide",
+              "option_text": "Review each trade that the advisor recommends",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2096",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2097,
+              "key_name": "invested",
+              "option_text": "Carefully track my entire portfolio daily and contact my advisor if I have questions",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2097",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2098,
+              "key_name": "invested",
+              "option_text": "I look at my statements monthly to stay informed",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2098",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2099,
+              "key_name": "invested",
+              "option_text": "I look at my statements only just before the regular review with them",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2099",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 481,
+          "rules": [],
+          "question_text": "If I were to prioritize my goals, I would put them in the following order...",
+          "description": "Rank from 1 to 5 with 1 being your highest priority",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "draw-form",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": null,
+              "key_name": "priority",
+              "option_text": "priority",
+              "type": "sort-input",
+              "value_type": "string",
+              "is_default": false,
+              "attributes": {},
+              "value": "1",
+              "validation": {
+                "required": true
+              },
+              "options": [
+                {
+                  "id": 1,
+                  "value": "Retirement income ",
+                  "text": "Retirement income ",
+                  "risk_option_id": 2100
+                },
+                {
+                  "id": 2,
+                  "value": "Kids' education or Vacation property ",
+                  "text": "Kids' education or Vacation property ",
+                  "risk_option_id": 2101
+                },
+                {
+                  "id": 3,
+                  "value": "Legacy ",
+                  "text": "Legacy ",
+                  "risk_option_id": 2102
+                },
+                {
+                  "id": 4,
+                  "value": "Emergency fund ",
+                  "text": "Emergency fund ",
+                  "risk_option_id": 2103
+                },
+                {
+                  "id": 5,
+                  "value": "Current lifestyle",
+                  "text": "Current lifestyle",
+                  "risk_option_id": 2104
+                }
+              ]
+            }
+          ],
+          "table": "persons",
+          "columns": [
+            {
+              "first_name": "first_name",
+              "middle_name": "middle_name",
+              "last_name": "last_name"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 482,
+          "rules": [],
+          "question_text": "You unexpectedly receive $[[0.25 * {{LIQUID_ASSETS}}]], what would you do with it?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "reset_response": true,
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2105,
+              "key_name": "receive",
+              "option_text": "Pay off debt or my mortgage",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2105",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2105",
+                  "questions": [
+                    483
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2106,
+              "key_name": "receive",
+              "option_text": "Save or invest it",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2106",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "false"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2107,
+              "key_name": "receive",
+              "option_text": "Take a holiday or buy a car",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2107",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2107",
+                  "questions": [
+                    483
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 483,
+          "rules": [
+            {
+              "value": "false",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{based}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "I would...",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2846,
+              "key_name": "option",
+              "option_text": "Deposit most of it in my bank account",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2846",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2847,
+              "key_name": "option",
+              "option_text": "Buy a GIC (Guaranteed Investment Certificate)",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2847",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2108,
+              "key_name": "option",
+              "option_text": "Invest most of it in stocks",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2108",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2109,
+              "key_name": "option",
+              "option_text": "Invest most of it in a balanced portfolio of stocks and bonds",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2109",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2110,
+              "key_name": "option",
+              "option_text": "Invest most of it in a bond portfolio",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2110",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{based}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "question_tag": true,
+          "id": 484,
+          "rules": [
+            {
+              "value": "true",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{based}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            },
+            {
+              "value": 0,
+              "value_type": "string",
+              "operator": ">=",
+              "client_data": null,
+              "param": "{{CALCULATE_85}}",
+              "rule_type": "data-tag",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "Based on your age, you are expected to live for an additional [[84 - {{AGE}}]] years. Do you believe that your income, savings and assets will be sufficient to ensure your quality of life for that long? ",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3067,
+              "key_name": "expected",
+              "option_text": "Yes, thanks to my pension",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3067",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3068,
+              "key_name": "expected",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3068",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3069,
+              "key_name": "expected",
+              "option_text": "That’s what i'm working towards",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3069",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3070,
+              "key_name": "expected",
+              "option_text": "If there isn’t a market meltdown",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3070",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 3071,
+              "key_name": "expected",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "3071",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 485,
+          "rules": [],
+          "question_text": "How would you characterize your personality?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2116,
+              "key_name": "characterize",
+              "option_text": "I'm a pessimist and always expect the worse",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2116",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2117,
+              "key_name": "characterize",
+              "option_text": "I'm anxious, and worry about most things",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2117",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2118,
+              "key_name": "characterize",
+              "option_text": "I'm cautious, but open to new ideas",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2118",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2119,
+              "key_name": "characterize",
+              "option_text": "I'm objective, and will live with my decision",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2119",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2120,
+              "key_name": "characterize",
+              "option_text": "I'm optimistic, things always work out in the end",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2120",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 486,
+          "rules": [],
+          "question_text": "With my investments, what is most important is that:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2121,
+              "key_name": "investment",
+              "option_text": "Each trade is profitable",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2121",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2122,
+              "key_name": "investment",
+              "option_text": "The total value of my portfolio doesn’t go down",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2122",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2123,
+              "key_name": "investment",
+              "option_text": "My portfolio generates enough cash for me to withdraw if I need it",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2123",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2124,
+              "key_name": "investment",
+              "option_text": "I can watch my portfolio grow steadily over time",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2124",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 487,
+          "rules": [],
+          "question_text": "Suppose that you are the only income earner in the family, and you have a good job guaranteed to give you your current family income every year for life. You are given the opportunity to take a new and equally good job, with a fifty-fifty chance it will increase your standard of living by 50%. However, the new job also has a fifty-fifty chance that it will cut your standard of living by 30%. Would you take the new job?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2133,
+              "key_name": "option",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2133",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{supose_35}}",
+                  "value": true,
+                  "value_key": "true"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "489",
+                  "questions": [
+                    488
+                  ]
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2134,
+              "key_name": "option",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2134",
+              "validation": {
+                "required": false
+              },
+              "tag": [
+                {
+                  "key": "{{supose_35}}",
+                  "value": true,
+                  "value_key": "false"
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "2134",
+                  "questions": [
+                    488
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 488,
+          "rules": [
+            {
+              "value": "true",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{supose_35}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "Suppose the chances are fifty-fifty that it would increase your standard of living by 50% and fifty-fifty that it would cut it by 50%. Would you take the job?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2135,
+              "key_name": "option",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2135",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2136,
+              "key_name": "option",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2136",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 489,
+          "rules": [
+            {
+              "value": "false",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{supose_35}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "question_text": "Suppose the chances are fifty-fifty that it would increase your standard of living by 50% and fifty-fifty that it would cut it by 20%. Would you take the job?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2137,
+              "key_name": "option",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2135",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2138,
+              "key_name": "option",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2136",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 490,
+          "rules": [],
+          "question_text": "To keep track of my investments during the market meltdown in 2008-2009:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2139,
+              "key_name": "option",
+              "option_text": "I looked at my investments every day",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2139",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2140,
+              "key_name": "option",
+              "option_text": "I only looked at my monthly statements",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2140",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2141,
+              "key_name": "option",
+              "option_text": "Put aside my statements because I didn’t want to scare myself",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2141",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2142,
+              "key_name": "option",
+              "option_text": "Didn't realise there was an issue until I saw my year-end report",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2142",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2143,
+              "key_name": "option",
+              "option_text": "I did not have any investments at the time",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2143",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 491,
+          "rules": [],
+          "question_text": "Suppose you have $1,000 in a savings account with a generous 2% annual interest rate. After 5 years, how much do you think you would have in the account if you left the money to grow?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2144,
+              "key_name": "option",
+              "option_text": "More than $1,020",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2144",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2145,
+              "key_name": "option",
+              "option_text": "Exactly $1,020",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2145",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2146,
+              "key_name": "option",
+              "option_text": "Less than $1,020",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2146",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2147,
+              "key_name": "option",
+              "option_text": "I don’t know",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2147",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 492,
+          "rules": [],
+          "question_text": "For your kids, you want:",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2148,
+              "key_name": "option",
+              "option_text": "To leave a meaningful amount",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2148",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2149,
+              "key_name": "option",
+              "option_text": "To leave them whatever is left after you enjoy your retirement",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2149",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2150,
+              "key_name": "option",
+              "option_text": "To provide for their needs now (education, first house, etc.) even if it impacts your future standard of living",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2150",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2151,
+              "key_name": "option",
+              "option_text": "To let them know you are giving it away to charity",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2151",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2152,
+              "key_name": "option",
+              "option_text": "I don't have kids",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2152",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 493,
+          "rules": [],
+          "question_text": "How long would you be willing to wait for your portfolio to regain any lost value, given the fluctuations of any investment portfolio?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2153,
+              "key_name": "option",
+              "option_text": "Less than 3 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2153",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2154,
+              "key_name": "option",
+              "option_text": "3 to 6 months",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2154",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2155,
+              "key_name": "option",
+              "option_text": "6 months to 1 year",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2155",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2156,
+              "key_name": "option",
+              "option_text": "1 to 2 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2156",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2157,
+              "key_name": "option",
+              "option_text": "More than 2 years",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2157",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 494,
+          "rules": [],
+          "question_text": "From September 2008 through November 2008, North American stock markets lost over 30%. If you owned an investment now that lost over 30% in 3 months, you would...",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2158,
+              "key_name": "option",
+              "option_text": "Sell all of the remaining investment to avoid further losses",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2158",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2159,
+              "key_name": "option",
+              "option_text": "Sell a portion of the remaining investment to protect some of your capital",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2159",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2160,
+              "key_name": "option",
+              "option_text": "Hold onto the investment and not sell any of the investment in the hopes of higher future returns",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2160",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2161,
+              "key_name": "option",
+              "option_text": "Buy more of the investment now that prices are lower ",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2161",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 495,
+          "rules": [],
+          "question_text": "Suppose you have a saving account with a 1% annual interest rate, and the inflation rate was 2% per year. After 1 year, how much would you be able to buy with the money in the account?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2162,
+              "key_name": "option",
+              "option_text": "More than today",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2162",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2163,
+              "key_name": "option",
+              "option_text": "Exactly the same as today",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2163",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2164,
+              "key_name": "option",
+              "option_text": "Less than today",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2164",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2165,
+              "key_name": "option",
+              "option_text": "I don’t know ",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2165",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        },
+        {
+          "id": 496,
+          "rules": [],
+          "question_text": "Relative to 5 years ago, I’m feeling ______ about the outlook for the financial markets / the economy in general?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2166,
+              "key_name": "option",
+              "option_text": "Much more negative",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2166",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2167,
+              "key_name": "option",
+              "option_text": "More negative",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2167",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2168,
+              "key_name": "option",
+              "option_text": "About the same",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2168",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2169,
+              "key_name": "option",
+              "option_text": "More positive",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2169",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2170,
+              "key_name": "option",
+              "option_text": "Much more positive",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2170",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        }
+      ]
+    },
+    {
+      "section_text": "Self Assessment",
+      "description": "Self Assessment",
+      "attributes": [],
+      "questions": [
+        {
+          "id": 497,
+          "rules": [],
+          "question_text": "Compared with others, how would you rate your willingness to take financial risks?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2171,
+              "key_name": "option",
+              "option_text": "Very low risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2171",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2172,
+              "key_name": "option",
+              "option_text": "Low risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2172",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2173,
+              "key_name": "option",
+              "option_text": "Average risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2173",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2174,
+              "key_name": "option",
+              "option_text": "Above average risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2174",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2175,
+              "key_name": "option",
+              "option_text": "High risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2175",
+              "validation": {
+                "required": false
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "risk_option_id": 2176,
+              "key_name": "option",
+              "option_text": "Very high risk taker",
+              "type": "single-choice-checkbox",
+              "value_type": "string",
+              "is_default": true,
+              "attributes": [],
+              "value": "2176",
+              "validation": {
+                "required": false
+              }
+            }
+          ],
+          "table": "client_employment",
+          "columns": [
+            {
+              "employment_status": "employment_status"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": true,
+          "relationship": ""
+        }
+      ]
+    }
+  ]
+}

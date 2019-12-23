@@ -1,0 +1,317 @@
+    {
+      "section_text": "Power of Attorney",
+      "description": "",
+      "attributes": "",
+      "questions": [
+        {
+          "id": 23,
+          "rules": [],
+          "question_text": "Will anyone have legal power of attorney over your accounts?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "",
+          "type": "static-single-choice",
+          "is_required": true,
+          "client_section_data": null,
+          "reset_response": true,
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_name": "power_of_attorney",
+              "option_text": "Yes",
+              "type": "single-choice-checkbox",
+              "value_type": "boolean",
+              "compare": true,
+              "attributes": [],
+              "value": "true",
+              "validation": [],
+              "tag": [
+                {
+                  "key": "{{power_of_attorney}}",
+                  "value": true
+                }
+              ]
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_name": "power_of_attorney",
+              "option_text": "No",
+              "type": "single-choice-checkbox",
+              "value_type": "boolean",
+              "compare": true,
+              "attributes": [],
+              "value": "false",
+              "validation": [],
+              "tag": [
+                {
+                  "key": "{{power_of_attorney}}",
+                  "value": true
+                }
+              ],
+              "reset_responses": [
+                {
+                  "value": "false",
+                  "questions": [
+                    24
+                  ]
+                }
+              ]
+            }
+          ],
+          "table": "relationships",
+          "columns": [
+            {
+              "power_of_attorney": "power_of_attorney"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": false,
+          "is_primary_client": false,
+          "relationship": ""
+        },
+        {
+          "id": 24,
+          "rules": [
+            {
+              "value": "true",
+              "value_type": "string",
+              "operator": "==",
+              "client_data": null,
+              "param": "{{power_of_attorney}}",
+              "rule_type": "response",
+              "description": "Shows question if client has Power of Attorney"
+            }
+          ],
+          "update_list_relationship":true,
+          "set_data_response": "modal_add_relationship",
+          "question_text": "Who will hold the Power of Attorney?",
+          "description": "",
+          "image_url": "",
+          "dynamic_option_types": "multiple-choice-checkbox",
+          "type": "multiple-dynamic-options",
+          "is_required": true,
+          "client_section_data": "['relationships']",
+          "update_relationship": true,
+          "update_questions": [
+            {
+              "id_question": 399,
+              "option": "multiple-choice-checkbox"
+            },
+            {
+              "id_question": 39,
+              "option": "single-choice-checkbox",
+              "section_pep": true
+            },
+            {
+              "id_question": 499,
+              "option": "multiple-choice-checkbox"
+            }
+          ],
+          "question_options": [
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_name": "add_relationship",
+              "option_text": "Add Relationship",
+              "title_modal": "Add Relationship",
+              "type": "modal_form",
+              "value_type": "string",
+              "compare": true,
+              "form_options": [
+                {
+                  "key_name": "first_name",
+                  "option_text": "First name",
+                  "type": "text",
+                  "attributes": {
+                    "placeholder": "First name",
+                    "key_validate": "first name"
+                  },
+                  "value": "",
+                  "validation": {
+                    "required": true
+                  }
+                },
+                {
+                  "key_name": "last_name",
+                  "option_text": "Last name",
+                  "type": "text",
+                  "attributes": {
+                    "placeholder": "Last name",
+                    "key_validate": "last name"
+                  },
+                  "value": "",
+                  "validation": {
+                    "required": true
+                  }
+                },
+                {
+                  "filter_marital": true,
+                  "key_name": "relationship",
+                  "option_text": "Relationship",
+                  "type": "dropdown",
+                  "attributes": {
+                    "placeholder": "Relationship",
+                    "key_validate": "relationship"
+                  },
+                  "value": "",
+                  "options": [
+                    {
+                      "id": 4,
+                      "text": "Parent",
+                      "value": "PA"
+                    },
+                    {
+                      "id": 11,
+                      "text": "Parents Sibling",
+                      "value": "PS"
+                    },
+                    {
+                      "id": 5,
+                      "text": "Child",
+                      "value": "CH"
+                    },
+                    {
+                      "id": 17,
+                      "text": "Spouse",
+                      "value": "SP"
+                    },
+                    {
+                      "id": 1,
+                      "text": "Common-law",
+                      "value": "CL"
+                    },
+                    {
+                      "id": 15,
+                      "text": "Sibling",
+                      "value": "SB"
+                    },
+                    {
+                      "id": 10,
+                      "text": "Siblings Child",
+                      "value": "SC"
+                    },
+                    {
+                      "id": 12,
+                      "text": "Cousin",
+                      "value": "CO"
+                    },
+                    {
+                      "id": 16,
+                      "text": "Friend",
+                      "value": "FR"
+                    },
+                    {
+                      "id": 18,
+                      "text": "Grandparent",
+                      "value": "GP"
+                    },
+                    {
+                      "id": 19,
+                      "text": "Grandchild",
+                      "value": "GC"
+                    }
+                  ],
+                  "validation": {
+                    "required": true
+                  }
+                }
+              ],
+              "value": "add_relationship",
+              "validation": {}
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "key_name": "power_of_attorney",
+              "option_text": "Power of Attorney",
+              "type": "hidden",
+              "value_type": "string",
+              "compare": false,
+              "attributes": {
+                "placeholder": "Power of Attorney"
+              },
+              "value": "true",
+              "validation": {
+                "required": true
+              }
+            },
+            {
+              "dependencies": [
+                {
+                  "marital_status": [
+                    "single",
+                    "married",
+                    "common-law",
+                    "separated",
+                    "divorced",
+                    "widowed"
+                  ]
+                }
+              ],
+              "initial_value": "['firm_id']",
+              "key_name": "firm_id",
+              "option_text": "firm_id",
+              "type": "hidden",
+              "value_type": "string",
+              "compare": false,
+              "attributes": {},
+              "value": "",
+              "validation": {}
+            }
+          ],
+          "table": "relationships",
+          "columns": [
+            {
+              "client_id": "client_id",
+              "power_of_attorney": "power_of_attorney"
+            }
+          ],
+          "responses": [],
+          "is_dynamic": true,
+          "is_primary_client": false,
+          "relationship": ""
+        }
+      ]
+    }

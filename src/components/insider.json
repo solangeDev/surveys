@@ -1,0 +1,148 @@
+{
+    "section": {
+        "description": "IIROC, Insider/Director and Shareholder",
+        "section_text": "IIROC, Insider/Director and Shareholder"
+    },
+    "relationship": "",
+    "id": null,
+    "client_id": null,
+    "rules": [
+        {
+            "value": "true",
+            "value_type": "string",
+            "operator": "==",
+            "client_data": null,
+            "param": "{{question_28}}",
+            "rule_type": "response",
+            "description": "Shows question if the client is insider"
+        },
+        {
+            "value": "someone_else",
+            "value_type": "string",
+            "operator": "==",
+            "client_data": null,
+            "param": "{{list_relationship_insider}}",
+            "rule_type": "response",
+            "description": "Shows question based on the client's marital status"
+        }
+    ],
+    "question_text": "Please tell us about the company where {{RELATIONSHIP}} is an insider or director.",
+    "description": "",
+    "image_url": "",
+    "dynamic_option_types": "",
+    "type": "static-form",
+    "is_required": true,
+    "is_insider":true,
+    "client_section_data": null,
+    "question_options": [
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "company",
+            "option_text": "Company details",
+            "type": "text",
+            "value_type": "string",
+            "compare": true,
+            "attributes": {
+                "placeholder": "Company details",
+                "key_validate": "company details"
+            },
+            "value": "",
+            "validation": {
+                "required": true
+            }
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "ticker_symbol",
+            "option_text": "Company ticker symbol",
+            "type": "text",
+            "value_type": "string",
+            "compare": true,
+            "attributes": {
+                "placeholder": "Company ticker symbol",
+                "key_validate": "company ticker symbol"
+            },
+            "value": "",
+            "validation": {
+                "required": true
+            }
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "kyc_type",
+            "option_text": "KYC Type",
+            "type": "hidden",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "I",
+            "validation": []
+        },
+        {
+            "dependencies": [
+                {
+                    "marital_status": [
+                        "single",
+                        "married",
+                        "common-law",
+                        "separated",
+                        "divorced",
+                        "widowed"
+                    ]
+                }
+            ],
+            "key_name": "client_id",
+            "option_text": "client_id",
+            "type": "hidden",
+            "value_type": "string",
+            "compare": true,
+            "attributes": [],
+            "value": "",
+            "validation": []
+        }
+    ],
+    "table": "kyc_details",
+    "columns": [
+        {
+            "company": "company",
+            "ticker_symbol": "ticker_symbol",
+            "kyc_type": "kyc_type"
+        }
+    ],
+    "responses": [],
+    "is_dynamic": false,
+    "is_primary_client": false
+}
